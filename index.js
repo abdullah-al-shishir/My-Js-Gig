@@ -29,7 +29,7 @@ const codeBody = document.getElementById("code-here");
 
 function display() {
   codeBody.classList.add("text-white", "text-class");
-  codeBody.textContent = `Here you will find the JS code that I have practiced.`;
+  codeBody.textContent = `Here you will find the JavaScript code that I have practiced.`;
 }
 
 codeBtn.forEach((collect) => {
