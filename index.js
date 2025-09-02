@@ -1,3 +1,28 @@
+const snippetNames = [
+  "Async/Await",
+  "Higher Order Functions",
+  "Simple Counter",
+  "DOM Manipulation",
+  "Object Destructuring",
+  "Array Filter",
+];
+const snippetsList = document.querySelector(".snippets-list");
+let buttonsHTML = "";
+
+snippetNames.forEach((name) => {
+  buttonsHTML += `
+    <li>
+      <button
+        class="code-btn code-btns p-3 mb-1 text-lg w-full text-left hover:cursor-pointer focus:bg-blue-700 hover:bg-blue-700 rounded-xl"
+      >
+        ${name}
+      </button>
+    </li>
+  `;
+});
+
+snippetsList.innerHTML = buttonsHTML;
+
 const codeBtn = document.querySelectorAll(".code-btn");
 const displaySnippets = document.getElementById("display-snippets");
 const codeBody = document.getElementById("code-here");
