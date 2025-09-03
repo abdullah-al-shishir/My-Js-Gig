@@ -29,7 +29,7 @@ const codeBody = document.getElementById("code-here");
 
 function display() {
   codeBody.classList.add("text-white", "text-class");
-  codeBody.textContent = `Here you will find the JS code that I have practiced.`;
+  codeBody.textContent = `Here you will find the JavaScript code that I have practiced.`;
 }
 
 codeBtn.forEach((collect) => {
@@ -117,6 +117,51 @@ logInfo('User logged in successfully.');
 
 logError('Failed to connect to the database.');
 // Output: [ERROR]: Failed to connect to the database.
+
+<span class="number-red">Reduce</span>
+<span class="number-red">2/ </span>
+const nums = [1, 2, 3];
+const jog = nums.reduce(sum);
+console.log(jog);
+
+<span class="number-red">1/ </span>
+const orders = [
+  {
+    name: "A",
+    price: 200,
+  },
+  {
+    name: "B",
+    price: 300,
+  },
+  {
+    name: "C",
+    price: 400,
+  },
+];
+const totalPrice = orders.reduce((acc, allOrder) => {
+  return acc + allOrder.price;
+}, 0);
+console.log(totalPrice);
+
+<span class="number-red">3/ </span>
+const products = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "T-shirt", category: "Apparel" },
+  { name: "Mouse", category: "Electronics" },
+  { name: "Pants", category: "Apparel" },
+];
+
+const groupedByCategory = products.reduce((acc, product) => {
+  const category = product.category;
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(product);
+  return acc;
+}, {});
+console.log(groupedByCategory);
+
 </code></pre>
       `;
     } else if (snippetsList.trim() === "Simple Counter") {
